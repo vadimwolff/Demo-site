@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1013" width="1800" height="1013" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="bg-kmgdb" x1="0.1" y1="0" x2="0.8" y2="1">
+<stop offset="0" stop-color="#161a21"/><stop offset="0.6" stop-color="#0b0d11"/><stop offset="1" stop-color="#040506"/>
+</linearGradient>
+<radialGradient id="pool-kmgdb" cx="0.5" cy="0.3" r="0.7">
+<stop offset="0" stop-color="#7f8da4" stop-opacity="0.3"/>
+<stop offset="0.6" stop-color="#7f8da4" stop-opacity="0.06"/>
+<stop offset="1" stop-color="#7f8da4" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="body-kmgdb" x1="0" y1="0" x2="0.25" y2="1">
+<stop offset="0" stop-color="#141821"/>
+<stop offset="0.4" stop-color="#08090b"/>
+<stop offset="1" stop-color="#020203"/>
+</linearGradient>
+<linearGradient id="bar-kmgdb" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="0.22" stop-color="#ffffff" stop-opacity="0.55"/>
+<stop offset="0.5" stop-color="#ffffff" stop-opacity="0.95"/>
+<stop offset="0.78" stop-color="#ffffff" stop-opacity="0.4"/>
+<stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="edge-kmgdb" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="0.3" stop-color="#ffffff" stop-opacity="0.75"/>
+<stop offset="0.62" stop-color="#9fb2cc" stop-opacity="0.85"/>
+<stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<filter id="soft-kmgdb" x="-25%" y="-60%" width="150%" height="220%"><feGaussianBlur stdDeviation="12.16"/></filter>
+<filter id="glow-kmgdb" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="6.08"/></filter>
+<filter id="grain-kmgdb" x="0" y="0" width="100%" height="100%">
+<feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/>
+<feColorMatrix type="saturate" values="0"/>
+</filter>
+<clipPath id="clip-kmgdb"><rect width="1800" height="1013"/></clipPath>
+<clipPath id="panel-kmgdb"><path d="M -90 465.47 C 540 319.1, 1080 508.53, 1890 353.54 L 1890 1021 L -90 1021 Z"/></clipPath>
+<radialGradient id="floor-kmgdb" cx="0.5" cy="1" r="0.7">
+<stop offset="0" stop-color="#7f8da4" stop-opacity="0.16"/>
+<stop offset="1" stop-color="#7f8da4" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<g clip-path="url(#clip-kmgdb)">
+<rect width="1800" height="1013" fill="url(#bg-kmgdb)"/>
+<rect width="1800" height="1013" fill="url(#pool-kmgdb)"/>
+<g transform="rotate(-6 900 364.68)" filter="url(#soft-kmgdb)"><rect x="-315" y="162.08" width="2430" height="28.36" rx="14.18" fill="url(#bar-kmgdb)" opacity="0.5"/><rect x="-90" y="288.71" width="1980" height="13.17" rx="6.58" fill="url(#bar-kmgdb)" opacity="0.32"/><rect x="135" y="420.4" width="1530" height="8.1" rx="4.05" fill="url(#bar-kmgdb)" opacity="0.2"/></g>
+<path d="M -90 465.47 C 540 319.1, 1080 508.53, 1890 353.54 L 1890 1021 L -90 1021 Z" fill="url(#body-kmgdb)"/>
+<g clip-path="url(#panel-kmgdb)" opacity="0.22">
+<g transform="translate(0 810.4) scale(1 -1)">
+<g transform="rotate(-6 900 364.68)" filter="url(#soft-kmgdb)"><rect x="-315" y="162.08" width="2430" height="28.36" rx="14.18" fill="url(#bar-kmgdb)" opacity="0.5"/><rect x="-90" y="288.71" width="1980" height="13.17" rx="6.58" fill="url(#bar-kmgdb)" opacity="0.32"/><rect x="135" y="420.4" width="1530" height="8.1" rx="4.05" fill="url(#bar-kmgdb)" opacity="0.2"/></g>
+</g>
+</g>
+<rect clip-path="url(#panel-kmgdb)" width="1800" height="1013" fill="url(#floor-kmgdb)"/>
+<path d="M -90 465.47 C 540 319.1, 1080 508.53, 1890 353.54" fill="none" stroke="url(#edge-kmgdb)" stroke-width="20.26" filter="url(#glow-kmgdb)" opacity="0.55"/>
+<path d="M -90 465.47 C 540 319.1, 1080 508.53, 1890 353.54" fill="none" stroke="url(#edge-kmgdb)" stroke-width="4.05"/>
+<rect width="1800" height="1013" filter="url(#grain-kmgdb)" opacity="0.06" style="mix-blend-mode:overlay"/>
+<text x="1749.35" y="962.35" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24.31" letter-spacing="8.1" fill="#ffffff" fill-opacity="0.42">DEMO · WORK 09</text>
+</g>
+</svg>

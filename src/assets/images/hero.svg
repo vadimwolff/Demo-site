@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" width="2400" height="1350" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="bg-ripa0" x1="0.1" y1="0" x2="0.8" y2="1">
+<stop offset="0" stop-color="#20232a"/><stop offset="0.6" stop-color="#101216"/><stop offset="1" stop-color="#050607"/>
+</linearGradient>
+<radialGradient id="pool-ripa0" cx="0.5" cy="0.3" r="0.7">
+<stop offset="0" stop-color="#9aa4b4" stop-opacity="0.3"/>
+<stop offset="0.6" stop-color="#9aa4b4" stop-opacity="0.06"/>
+<stop offset="1" stop-color="#9aa4b4" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="body-ripa0" x1="0" y1="0" x2="0.25" y2="1">
+<stop offset="0" stop-color="#191c22"/>
+<stop offset="0.4" stop-color="#08090b"/>
+<stop offset="1" stop-color="#020203"/>
+</linearGradient>
+<linearGradient id="bar-ripa0" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="0.22" stop-color="#ffffff" stop-opacity="0.55"/>
+<stop offset="0.5" stop-color="#ffffff" stop-opacity="0.95"/>
+<stop offset="0.78" stop-color="#ffffff" stop-opacity="0.4"/>
+<stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="edge-ripa0" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="0.3" stop-color="#ffffff" stop-opacity="0.75"/>
+<stop offset="0.62" stop-color="#c98b4b" stop-opacity="0.85"/>
+<stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<filter id="soft-ripa0" x="-25%" y="-60%" width="150%" height="220%"><feGaussianBlur stdDeviation="16.2"/></filter>
+<filter id="glow-ripa0" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="8.1"/></filter>
+<filter id="grain-ripa0" x="0" y="0" width="100%" height="100%">
+<feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/>
+<feColorMatrix type="saturate" values="0"/>
+</filter>
+<clipPath id="clip-ripa0"><rect width="2400" height="1350"/></clipPath>
+<clipPath id="panel-ripa0"><path d="M -120 822.83 C 720 627.75, 1440 880.2, 2520 673.65 L 2520 1358 L -120 1358 Z"/></clipPath>
+<radialGradient id="floor-ripa0" cx="0.5" cy="1" r="0.7">
+<stop offset="0" stop-color="#9aa4b4" stop-opacity="0.16"/>
+<stop offset="1" stop-color="#9aa4b4" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<g clip-path="url(#clip-ripa0)">
+<rect width="2400" height="1350" fill="url(#bg-ripa0)"/>
+<rect width="2400" height="1350" fill="url(#pool-ripa0)"/>
+<g transform="rotate(-9 1200 486)" filter="url(#soft-ripa0)"><rect x="-420" y="216" width="3240" height="37.8" rx="18.9" fill="url(#bar-ripa0)" opacity="0.5"/><rect x="-120" y="384.75" width="2640" height="17.55" rx="8.78" fill="url(#bar-ripa0)" opacity="0.32"/><rect x="180" y="560.25" width="2040" height="10.8" rx="5.4" fill="url(#bar-ripa0)" opacity="0.2"/></g>
+<path d="M -120 822.83 C 720 627.75, 1440 880.2, 2520 673.65 L 2520 1358 L -120 1358 Z" fill="url(#body-ripa0)"/>
+<g clip-path="url(#panel-ripa0)" opacity="0.22">
+<g transform="translate(0 1485) scale(1 -1)">
+<g transform="rotate(-9 1200 486)" filter="url(#soft-ripa0)"><rect x="-420" y="216" width="3240" height="37.8" rx="18.9" fill="url(#bar-ripa0)" opacity="0.5"/><rect x="-120" y="384.75" width="2640" height="17.55" rx="8.78" fill="url(#bar-ripa0)" opacity="0.32"/><rect x="180" y="560.25" width="2040" height="10.8" rx="5.4" fill="url(#bar-ripa0)" opacity="0.2"/></g>
+</g>
+</g>
+<rect clip-path="url(#panel-ripa0)" width="2400" height="1350" fill="url(#floor-ripa0)"/>
+<path d="M -120 822.83 C 720 627.75, 1440 880.2, 2520 673.65" fill="none" stroke="url(#edge-ripa0)" stroke-width="27" filter="url(#glow-ripa0)" opacity="0.55"/>
+<path d="M -120 822.83 C 720 627.75, 1440 880.2, 2520 673.65" fill="none" stroke="url(#edge-ripa0)" stroke-width="5.4"/>
+<rect width="2400" height="1350" filter="url(#grain-ripa0)" opacity="0.06" style="mix-blend-mode:overlay"/>
+<text x="2332.5" y="1282.5" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="32.4" letter-spacing="10.8" fill="#ffffff" fill-opacity="0.42">DEMO · HERO</text>
+</g>
+</svg>
