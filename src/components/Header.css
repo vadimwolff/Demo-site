@@ -1,0 +1,259 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/*
+ * The blur lives on the bar, not on .header: a backdrop-filter would make the
+ * header a containing block for the fixed mobile menu and collapse it.
+ */
+.header__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 72px;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid transparent;
+  transition:
+    border-color 300ms var(--ease),
+    background-color 300ms var(--ease);
+}
+
+.header--scrolled .header__bar {
+  border-bottom-color: var(--line);
+  background: color-mix(in srgb, var(--bg) 94%, transparent);
+}
+
+/* ---- Wordmark ---- */
+
+.wordmark {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  flex-shrink: 0;
+  /* Negative margin keeps the bar height while the tap target stays 48px. */
+  padding-block: 0.65rem;
+  margin-block: -0.65rem;
+}
+
+.wordmark__name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.0625rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.wordmark__sub {
+  display: none;
+  padding-left: 0.6rem;
+  border-left: 1px solid var(--line-strong);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+/* ---- Desktop nav ---- */
+
+.header__nav {
+  display: none;
+}
+
+.header__links {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.25rem, 2vw, 2.25rem);
+}
+
+.header__link {
+  position: relative;
+  display: inline-block;
+  padding-block: 0.5rem;
+  font-size: 0.9375rem;
+  color: var(--text-dim);
+  transition: color 220ms var(--ease);
+}
+
+.header__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.25rem;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms var(--ease);
+}
+
+.header__link:hover {
+  color: var(--text);
+}
+
+.header__link:hover::after {
+  transform: scaleX(1);
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header__cta {
+  display: none;
+}
+
+/* ---- Burger ---- */
+
+.header__burger {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-right: -0.75rem;
+}
+
+.burger {
+  display: block;
+  position: relative;
+  width: 22px;
+  height: 12px;
+}
+
+.burger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: var(--text);
+  transition:
+    transform 320ms var(--ease),
+    opacity 200ms var(--ease);
+}
+
+.burger span:first-child {
+  top: 0;
+}
+
+.burger span:last-child {
+  bottom: 0;
+}
+
+.burger--open span:first-child {
+  transform: translateY(5.25px) rotate(45deg);
+}
+
+.burger--open span:last-child {
+  transform: translateY(-5.25px) rotate(-45deg);
+}
+
+/* ---- Mobile menu ---- */
+
+.menu {
+  position: fixed;
+  inset: 72px 0 0;
+  background: var(--bg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition:
+    opacity 320ms var(--ease),
+    transform 320ms var(--ease),
+    visibility 320ms;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.menu--open {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.menu__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-block: clamp(1.5rem, 5vh, 3rem) 3rem;
+  min-height: 100%;
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--line);
+}
+
+.menu__links li {
+  border-bottom: 1px solid var(--line);
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 380ms var(--ease),
+    transform 380ms var(--ease);
+}
+
+.menu--open .menu__links li {
+  opacity: 1;
+  transform: none;
+}
+
+.menu__link {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding-block: 1.05rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.menu__index {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+.menu__cta {
+  width: 100%;
+  margin-top: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu__links li {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0ms !important;
+  }
+}
+
+@media (min-width: 40rem) {
+  .wordmark__sub {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 60rem) {
+  .header__nav,
+  .header__cta {
+    display: block;
+  }
+
+  .header__burger {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+  }
+}

@@ -1,0 +1,56 @@
+.principles {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+
+.principle {
+  display: grid;
+  gap: 0.75rem;
+  padding-block: clamp(1.75rem, 3vw, 2.5rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.principle__index {
+  font-family: var(--font-mono);
+  font-size: var(--step-label);
+  letter-spacing: 0.14em;
+  color: var(--accent);
+}
+
+.principle__title {
+  font-size: clamp(1.1875rem, 1.05rem + 0.6vw, 1.4375rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  max-width: 24ch;
+}
+
+.principle__body {
+  max-width: 56ch;
+  color: var(--text-dim);
+  text-wrap: pretty;
+}
+
+@media (min-width: 48rem) {
+  .principle {
+    grid-template-columns: 4rem minmax(0, 1fr);
+    column-gap: clamp(1.5rem, 3vw, 2.5rem);
+  }
+
+  .principle__index {
+    grid-row: span 2;
+    padding-top: 0.4rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .principles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(3rem, 6vw, 6rem);
+  }
+
+  /* Keep the hairline rhythm even when the rows sit side by side. */
+  .principle:nth-child(-n + 2) {
+    padding-top: clamp(1.75rem, 3vw, 2.5rem);
+  }
+}

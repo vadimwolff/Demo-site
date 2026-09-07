@@ -1,0 +1,61 @@
+.btn {
+  --btn-bg: transparent;
+  --btn-fg: var(--text);
+  --btn-border: transparent;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--btn-border);
+  border-radius: 2px;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  white-space: nowrap;
+  transition:
+    background-color 260ms var(--ease),
+    border-color 260ms var(--ease),
+    color 260ms var(--ease);
+}
+
+.btn--lg {
+  min-height: 56px;
+  padding: 0.95rem 2rem;
+  font-size: 1rem;
+}
+
+.btn--primary {
+  --btn-bg: var(--text);
+  --btn-fg: #0a0b0d;
+  --btn-border: var(--text);
+}
+
+.btn--ghost {
+  --btn-border: var(--line-strong);
+  --btn-fg: var(--text);
+}
+
+.btn__label {
+  display: block;
+}
+
+@media (hover: hover) {
+  .btn--primary:hover {
+    --btn-bg: var(--accent);
+    --btn-border: var(--accent);
+  }
+
+  .btn--ghost:hover {
+    --btn-border: var(--accent);
+    --btn-fg: var(--accent);
+  }
+}
+
+.btn:active {
+  transform: translateY(1px);
+}

@@ -1,0 +1,51 @@
+.studio {
+  display: grid;
+  gap: clamp(2rem, 4vw, 3rem);
+}
+
+.studio__rating {
+  padding-top: clamp(1.5rem, 3vw, 2rem);
+  border-top: 1px solid var(--line);
+}
+
+.studio__text {
+  display: grid;
+  gap: 1.25rem;
+  align-content: start;
+}
+
+.studio__title {
+  font-size: var(--step-title);
+  max-width: 22ch;
+}
+
+.studio__note {
+  font-family: var(--font-mono);
+  font-size: var(--step-label);
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+}
+
+@media (min-width: 60rem) {
+  .studio {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+    grid-template-areas:
+      'eyebrow text'
+      'rating  text';
+    column-gap: clamp(3rem, 6vw, 6rem);
+    row-gap: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .studio__eyebrow {
+    grid-area: eyebrow;
+  }
+
+  .studio__rating {
+    grid-area: rating;
+    align-self: start;
+  }
+
+  .studio__text {
+    grid-area: text;
+  }
+}

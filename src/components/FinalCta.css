@@ -1,0 +1,29 @@
+.final-cta {
+  background: var(--bg-raised);
+}
+
+.final-cta__inner {
+  display: grid;
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: end;
+}
+
+.final-cta__title {
+  font-size: var(--step-title);
+  max-width: 18ch;
+}
+
+.final-cta__button {
+  justify-self: start;
+}
+
+@media (min-width: 60rem) {
+  .final-cta__inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: clamp(3rem, 6vw, 6rem);
+  }
+
+  .final-cta__button {
+    justify-self: end;
+  }
+}

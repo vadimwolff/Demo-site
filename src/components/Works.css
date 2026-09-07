@@ -1,0 +1,179 @@
+.works__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+}
+
+.works__filter {
+  position: relative;
+  padding-block: 0.6rem;
+  min-height: 44px;
+  font-size: 0.9375rem;
+  color: var(--text-faint);
+  transition: color 220ms var(--ease);
+}
+
+.works__filter::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.5rem;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 280ms var(--ease);
+}
+
+.works__filter:hover {
+  color: var(--text);
+}
+
+.works__filter.is-active {
+  color: var(--text);
+}
+
+.works__filter.is-active::after,
+.works__filter:hover::after {
+  transform: scaleX(1);
+}
+
+/* ---- Grid ---- */
+
+.works__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(0.625rem, 1.1vw, 1.125rem);
+}
+
+.work {
+  min-width: 0;
+}
+
+.work__button {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+
+.work__frame {
+  display: block;
+  position: relative;
+  flex: 1 1 auto;
+  /* Landscape tiles while the grid is a single column; portrait once it splits. */
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: var(--bg-sunken);
+}
+
+.work__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 700ms var(--ease),
+    filter 500ms var(--ease);
+}
+
+.work__frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(4, 5, 6, 0.75) 0%, rgba(4, 5, 6, 0) 55%);
+  opacity: 0;
+  transition: opacity 400ms var(--ease);
+}
+
+.work__caption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.work__title {
+  color: var(--text-dim);
+  transition: color 260ms var(--ease);
+}
+
+.work__open {
+  font-family: var(--font-mono);
+  font-size: var(--step-label);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity 260ms var(--ease);
+}
+
+@media (hover: hover) {
+  .work__button:hover .work__image,
+  .work__button:focus-visible .work__image {
+    transform: scale(1.045);
+    filter: brightness(0.82);
+  }
+
+  .work__button:hover .work__frame::after,
+  .work__button:focus-visible .work__frame::after {
+    opacity: 1;
+  }
+
+  .work__button:hover .work__title,
+  .work__button:focus-visible .work__title {
+    color: var(--text);
+  }
+
+  .work__button:hover .work__open,
+  .work__button:focus-visible .work__open {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 40rem) {
+  .works__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .work__frame {
+    aspect-ratio: 4 / 5;
+  }
+}
+
+/* Two-column range only: an odd final tile spans the row instead of leaving a hole. */
+@media (min-width: 40rem) and (max-width: 59.99rem) {
+  .work:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+  .work:last-child:nth-child(odd) .work__frame {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (min-width: 60rem) {
+  .works__grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .work {
+    grid-column: span var(--cols, 2);
+  }
+
+  .work__frame {
+    aspect-ratio: var(--ratio, 4 / 5);
+  }
+
+  /* A filtered view is always three equal tiles — one flush row. */
+  .works__grid--uniform .work {
+    grid-column: span 2;
+  }
+
+  .works__grid--uniform .work__frame {
+    aspect-ratio: 4 / 5;
+  }
+}

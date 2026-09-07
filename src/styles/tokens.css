@@ -1,0 +1,71 @@
+/* Design tokens: colours, type scale, rhythm. Single source of truth. */
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/manrope-cyrillic.woff2') format('woff2');
+  font-weight: 200 800;
+  font-display: swap;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/manrope-latin.woff2') format('woff2');
+  font-weight: 200 800;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F,
+    U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-cyrillic.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-latin.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F,
+    U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  /* Surfaces */
+  --bg: #08090b;
+  --bg-raised: #0e1013;
+  --bg-sunken: #050607;
+
+  /* Ink */
+  --text: #eceef1;
+  --text-dim: #9ba2ac;
+  --text-faint: #7c828c;
+
+  /* One accent, used sparingly. */
+  --accent: #c98b4b;
+  --accent-quiet: rgba(201, 139, 75, 0.16);
+
+  /* Hairlines */
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.18);
+
+  /* Type */
+  --font-display: 'Manrope', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, 'Cascadia Mono', monospace;
+
+  --step-display: clamp(2.125rem, 1.45rem + 2.9vw, 3.85rem);
+  --step-title: clamp(1.6rem, 1.15rem + 1.95vw, 2.75rem);
+  --step-lead: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
+  --step-body: 1rem;
+  --step-label: 0.75rem;
+
+  /* Rhythm */
+  --shell: 1320px;
+  --pad-inline: clamp(1.25rem, 0.6rem + 2.8vw, 4rem);
+  --section-y: clamp(4.5rem, 2.5rem + 8vw, 8.5rem);
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur: 420ms;
+}

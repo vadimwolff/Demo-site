@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" width="1200" height="1600" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="bg-ofoff" x1="0.1" y1="0" x2="0.8" y2="1">
+<stop offset="0" stop-color="#1b1f24"/><stop offset="0.6" stop-color="#0d0f12"/><stop offset="1" stop-color="#040506"/>
+</linearGradient>
+<radialGradient id="pool-ofoff" cx="0.5" cy="0.3" r="0.7">
+<stop offset="0" stop-color="#a4aeba" stop-opacity="0.3"/>
+<stop offset="0.6" stop-color="#a4aeba" stop-opacity="0.06"/>
+<stop offset="1" stop-color="#a4aeba" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="body-ofoff" x1="0" y1="0" x2="0.25" y2="1">
+<stop offset="0" stop-color="#171b20"/>
+<stop offset="0.4" stop-color="#08090b"/>
+<stop offset="1" stop-color="#020203"/>
+</linearGradient>
+<linearGradient id="bar-ofoff" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="0.22" stop-color="#ffffff" stop-opacity="0.55"/>
+<stop offset="0.5" stop-color="#ffffff" stop-opacity="0.95"/>
+<stop offset="0.78" stop-color="#ffffff" stop-opacity="0.4"/>
+<stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="edge-ofoff" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="0.3" stop-color="#ffffff" stop-opacity="0.75"/>
+<stop offset="0.62" stop-color="#b6c2d0" stop-opacity="0.85"/>
+<stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<filter id="soft-ofoff" x="-25%" y="-60%" width="150%" height="220%"><feGaussianBlur stdDeviation="14.4"/></filter>
+<filter id="glow-ofoff" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="7.2"/></filter>
+<filter id="grain-ofoff" x="0" y="0" width="100%" height="100%">
+<feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/>
+<feColorMatrix type="saturate" values="0"/>
+</filter>
+<clipPath id="clip-ofoff"><rect width="1200" height="1600"/></clipPath>
+<clipPath id="panel-ofoff"><path d="M -60 975.2 C 360 744, 720 1043.2, 1260 798.4 L 1260 1608 L -60 1608 Z"/></clipPath>
+<radialGradient id="floor-ofoff" cx="0.5" cy="1" r="0.7">
+<stop offset="0" stop-color="#a4aeba" stop-opacity="0.16"/>
+<stop offset="1" stop-color="#a4aeba" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<g clip-path="url(#clip-ofoff)">
+<rect width="1200" height="1600" fill="url(#bg-ofoff)"/>
+<rect width="1200" height="1600" fill="url(#pool-ofoff)"/>
+<g transform="rotate(4 600 576)" filter="url(#soft-ofoff)"><rect x="-210" y="256" width="1620" height="33.6" rx="16.8" fill="url(#bar-ofoff)" opacity="0.5"/><rect x="-60" y="456" width="1320" height="15.6" rx="7.8" fill="url(#bar-ofoff)" opacity="0.32"/><rect x="90" y="664" width="1020" height="9.6" rx="4.8" fill="url(#bar-ofoff)" opacity="0.2"/></g>
+<path d="M -60 975.2 C 360 744, 720 1043.2, 1260 798.4 L 1260 1608 L -60 1608 Z" fill="url(#body-ofoff)"/>
+<g clip-path="url(#panel-ofoff)" opacity="0.22">
+<g transform="translate(0 1760) scale(1 -1)">
+<g transform="rotate(4 600 576)" filter="url(#soft-ofoff)"><rect x="-210" y="256" width="1620" height="33.6" rx="16.8" fill="url(#bar-ofoff)" opacity="0.5"/><rect x="-60" y="456" width="1320" height="15.6" rx="7.8" fill="url(#bar-ofoff)" opacity="0.32"/><rect x="90" y="664" width="1020" height="9.6" rx="4.8" fill="url(#bar-ofoff)" opacity="0.2"/></g>
+</g>
+</g>
+<rect clip-path="url(#panel-ofoff)" width="1200" height="1600" fill="url(#floor-ofoff)"/>
+<path d="M -60 975.2 C 360 744, 720 1043.2, 1260 798.4" fill="none" stroke="url(#edge-ofoff)" stroke-width="24" filter="url(#glow-ofoff)" opacity="0.55"/>
+<path d="M -60 975.2 C 360 744, 720 1043.2, 1260 798.4" fill="none" stroke="url(#edge-ofoff)" stroke-width="4.8"/>
+<rect width="1200" height="1600" filter="url(#grain-ofoff)" opacity="0.06" style="mix-blend-mode:overlay"/>
+<text x="1140" y="1540" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28.8" letter-spacing="9.6" fill="#ffffff" fill-opacity="0.42">DEMO · WORK 08</text>
+</g>
+</svg>

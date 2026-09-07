@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="bg-guevv" x1="0.1" y1="0" x2="0.8" y2="1">
+<stop offset="0" stop-color="#20232a"/><stop offset="0.6" stop-color="#101216"/><stop offset="1" stop-color="#050607"/>
+</linearGradient>
+<radialGradient id="pool-guevv" cx="0.5" cy="0.3" r="0.7">
+<stop offset="0" stop-color="#9aa4b4" stop-opacity="0.3"/>
+<stop offset="0.6" stop-color="#9aa4b4" stop-opacity="0.06"/>
+<stop offset="1" stop-color="#9aa4b4" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="body-guevv" x1="0" y1="0" x2="0.25" y2="1">
+<stop offset="0" stop-color="#191c22"/>
+<stop offset="0.4" stop-color="#08090b"/>
+<stop offset="1" stop-color="#020203"/>
+</linearGradient>
+<linearGradient id="bar-guevv" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="0.22" stop-color="#ffffff" stop-opacity="0.55"/>
+<stop offset="0.5" stop-color="#ffffff" stop-opacity="0.95"/>
+<stop offset="0.78" stop-color="#ffffff" stop-opacity="0.4"/>
+<stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="edge-guevv" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="0.3" stop-color="#ffffff" stop-opacity="0.75"/>
+<stop offset="0.62" stop-color="#c98b4b" stop-opacity="0.85"/>
+<stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<filter id="soft-guevv" x="-25%" y="-60%" width="150%" height="220%"><feGaussianBlur stdDeviation="14.4"/></filter>
+<filter id="glow-guevv" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="7.2"/></filter>
+<filter id="grain-guevv" x="0" y="0" width="100%" height="100%">
+<feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/>
+<feColorMatrix type="saturate" values="0"/>
+</filter>
+<clipPath id="clip-guevv"><rect width="1200" height="1200"/></clipPath>
+<clipPath id="panel-guevv"><path d="M -60 887.4 C 360 714, 720 938.4, 1260 754.8 L 1260 1208 L -60 1208 Z"/></clipPath>
+<radialGradient id="floor-guevv" cx="0.5" cy="1" r="0.7">
+<stop offset="0" stop-color="#9aa4b4" stop-opacity="0.16"/>
+<stop offset="1" stop-color="#9aa4b4" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<g clip-path="url(#clip-guevv)">
+<rect width="1200" height="1200" fill="url(#bg-guevv)"/>
+<rect width="1200" height="1200" fill="url(#pool-guevv)"/>
+<g transform="rotate(-12 600 432)" filter="url(#soft-guevv)"><rect x="-210" y="192" width="1620" height="33.6" rx="16.8" fill="url(#bar-guevv)" opacity="0.5"/><rect x="-60" y="342" width="1320" height="15.6" rx="7.8" fill="url(#bar-guevv)" opacity="0.32"/><rect x="90" y="498" width="1020" height="9.6" rx="4.8" fill="url(#bar-guevv)" opacity="0.2"/></g>
+<path d="M -60 887.4 C 360 714, 720 938.4, 1260 754.8 L 1260 1208 L -60 1208 Z" fill="url(#body-guevv)"/>
+<g clip-path="url(#panel-guevv)" opacity="0.22">
+<g transform="translate(0 1632) scale(1 -1)">
+<g transform="rotate(-12 600 432)" filter="url(#soft-guevv)"><rect x="-210" y="192" width="1620" height="33.6" rx="16.8" fill="url(#bar-guevv)" opacity="0.5"/><rect x="-60" y="342" width="1320" height="15.6" rx="7.8" fill="url(#bar-guevv)" opacity="0.32"/><rect x="90" y="498" width="1020" height="9.6" rx="4.8" fill="url(#bar-guevv)" opacity="0.2"/></g>
+</g>
+</g>
+<rect clip-path="url(#panel-guevv)" width="1200" height="1200" fill="url(#floor-guevv)"/>
+<path d="M -60 887.4 C 360 714, 720 938.4, 1260 754.8" fill="none" stroke="url(#edge-guevv)" stroke-width="24" filter="url(#glow-guevv)" opacity="0.55"/>
+<path d="M -60 887.4 C 360 714, 720 938.4, 1260 754.8" fill="none" stroke="url(#edge-guevv)" stroke-width="4.8"/>
+<rect width="1200" height="1200" filter="url(#grain-guevv)" opacity="0.06" style="mix-blend-mode:overlay"/>
+<text x="1140" y="1140" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28.8" letter-spacing="9.6" fill="#ffffff" fill-opacity="0.42">DEMO · WORK 07</text>
+</g>
+</svg>
