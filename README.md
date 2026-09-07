@@ -17,11 +17,13 @@ npm run typecheck # только проверка типов
 ## Публикация
 
 Сайт разворачивается на GitHub Pages автоматически: `.github/workflows/deploy.yml`
-собирает проект и публикует папку `dist/` при каждом пуше в `main`.
+собирает проект и публикует папку `dist/` при каждом пуше в ветку по умолчанию.
 
-После того как workflow окажется в `main`, его можно запускать и вручную с любой ветки:
-вкладка **Actions** → *Deploy to GitHub Pages* → *Run workflow*. Раньше этого кнопки не будет —
-GitHub показывает ручной запуск только для workflow, которые есть в ветке по умолчанию.
+Его же можно запустить вручную: вкладка **Actions** → *Deploy to GitHub Pages* → *Run workflow*.
+
+Обязательное условие: в **Settings → Pages → Build and deployment** источником должен быть
+выбран **GitHub Actions**. В режиме «Deploy from a branch» GitHub выкладывает исходники
+репозитория вместо собранного сайта, и страница получается пустой.
 
 Адрес по умолчанию: `https://vadimwolff.github.io/Demo-site/`.
 
