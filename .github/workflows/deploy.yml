@@ -3,7 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
-  # Lets you publish any branch manually from the Actions tab before merging.
+  # Manual runs from the Actions tab. GitHub only offers this once the workflow
+  # file is on the default branch, after which any branch can be published.
   workflow_dispatch:
 
 permissions:
